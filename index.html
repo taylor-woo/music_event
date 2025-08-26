@@ -53,11 +53,11 @@
     </main>	
 
 <script>
-  window.botpressWebChat = {
-    "config": {
-      "useSessionStorage": true
-    }
-  };
+    window.addEventListener('load', function() {
+        window.botpressWebChat.mergeConfig({
+            useSessionStorage: true
+        });
+    });
 </script>
 			
 <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
