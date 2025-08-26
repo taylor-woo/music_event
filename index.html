@@ -52,13 +52,16 @@
         </section>
     </main>	
 
-<script>
-      window.botpressWebChat = {
-        "useSessionStorage": true
-      };
-</script>
 <script src="https://cdn.botpress.cloud/webchat/v3.2/inject.js" defer></script>
 <script src="https://files.bpcontent.cloud/2025/08/26/01/20250826012704-32OEDEUJ.js" defer></script>  
 
+<script>
+  window.addEventListener('beforeunload', function (e) {
+    if (window.botpressWebChat) {
+      window.botpressWebChat.store.resetConversation();
+    }
+  });
+</script>
+			
 </body>
 </html>
